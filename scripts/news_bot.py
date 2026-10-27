@@ -4,8 +4,8 @@
 通过公开 RSS 按自定义主题拉取资讯，签名后推送到飞书群。
 用法:
   python scripts/news_bot.py --once
-  python scripts/news_bot.py --once --topics "AI大模型,具身智能,每日财经热点"
-  python scripts/news_bot.py --schedule --topics "量子计算,机器人"
+  python scripts/news_bot.py --once --topics "南江,项目,采购,弱电"
+  python scripts/news_bot.py --schedule --topics "信息化,弱电,集成,网络,专线,链路"
 """
 from __future__ import annotations
 
