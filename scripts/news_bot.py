@@ -103,85 +103,18 @@ USER_AGENT = (
 
 # 国内可访问的科技 RSS（通用回退）
 FALLBACK_FEEDS = (
-    "https://www.ithome.com/rss/",
-    "https://36kr.com/feed",
-    "https://www.solidot.org/index.rss",
+    "http://www.ccgp-sichuan.gov.cn//",
+    "https://ggzyjy.sc.gov.cn/jyxx/transactionInfo.html",
+    "https://ctbpsp.com/#/bulletinList?keyWords=南江",
+    "https://www.njxyy.cn/information/id/19.html"
+    "https://swueecg.com/#/purchase/search"
 )
 
-# 特定主题优先源（专业站点 RSS，避免 Google 泛搜出地方杂讯）
-TOPIC_PRIMARY_FEEDS: dict[str, tuple[str, ...]] = {
-    "每日财经热点": (
-        "https://rss.huxiu.com/",
-        "https://36kr.com/feed",
-    ),
+,
 }
 
-# Google News 检索词（不填则直接用主题名）
-TOPIC_SEARCH_QUERIES: dict[str, str] = {
-    "每日财经热点": (
-        "虎嗅 OR 华尔街见闻 OR 财联社 OR 第一财经 OR 界面新闻 OR 经济观察报"
-    ),
-    "具身智能": "具身智能 OR 人形机器人 OR 优必选 OR 智元 OR 宇树",
-    "AI大模型": "AI大模型 OR 大模型 OR DeepSeek OR OpenAI OR Kimi",
-}
 
-# 主题同义词：国内综合源标题很少出现完整主题词，需放宽过滤
-TOPIC_SYNONYMS: dict[str, tuple[str, ...]] = {
-    "AI大模型": (
-        "AI大模型",
-        "大模型",
-        "人工智能",
-        "生成式",
-        "ChatGPT",
-        "OpenAI",
-        "Claude",
-        "Gemini",
-        "Kimi",
-        "DeepSeek",
-        "通义",
-        "文心",
-        "智谱",
-        "Grok",
-        "LLM",
-        "AIGC",
-    ),
-    "具身智能": (
-        "具身智能",
-        "人形机器人",
-        "具身",
-        "灵巧手",
-        "四足机器人",
-        "工业机器人",
-        "Figure",
-        "优必选",
-        "智元",
-        "宇树",
-        "Tesla Bot",
-        "Optimus",
-        "机器人公司",
-    ),
-    "每日财经热点": (
-        "每日财经热点",
-        "财经",
-        "商业",
-        "消费",
-        "融资",
-        "IPO",
-        "财报",
-        "股市",
-        "A股",
-        "港股",
-        "美股",
-        "央行",
-        "美联储",
-        "降息",
-        "加息",
-        "通胀",
-        "虎嗅",
-        "华尔街见闻",
-        "财联社",
-    ),
-}
+
 
 
 def validate_config() -> None:
